@@ -1,0 +1,23 @@
+micronaut:
+  server:
+    port: 8082
+
+# DataSource config via env variables with sensible defaults
+# Hikari pool can be tuned via DB_POOL_SIZE
+
+
+
+# Standard Micronaut JDBC/Hikari configuration
+
+
+
+# Datasource configuration
+
+
+datasources:
+  default:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:postgres}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driverClassName: org.postgresql.Driver
+    maximumPoolSize: ${DB_POOL_SIZE:10}
