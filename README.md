@@ -102,6 +102,8 @@ cd spring-boot-service
 /usr/bin/time -f "Spring Boot cold start: %E (wall), %M KB (max RSS)" \
   mvn -q -DskipTests spring-boot:run
 ```
+### Started Application in 1.7 seconds (process running for 1.916) - Server Running: http://localhost:8081
+
 
 Micronaut:
 
@@ -110,6 +112,7 @@ cd micronaut-service
 /usr/bin/time -f "Micronaut cold start: %E (wall), %M KB (max RSS)" \
   mvn -q -DskipTests exec:java -Dexec.mainClass=com.benchmark.micro.Application
 ```
+###  Startup completed in 770ms. Server Running: http://localhost:8082
 
 Both frameworks also log startup times in their banners (look for lines like “Started … in X seconds”). For fair comparisons, run several times, discard outliers, and consider warm vs. cold starts separately.
 
